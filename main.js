@@ -166,4 +166,6 @@ app.get('/redirect', async ( req, res ) => {
 	  }
 })
 
+app.use(express.static('legal', {extensions: ['html']}))
+
 client.login(config.botToken)
