@@ -129,6 +129,7 @@ app.get('/redirect', async ( req, res ) => {
 				}
 				else {
 					member.setNickname(username)
+					member.roles.add(786733881369690153)
 				}
 				
 				const embed = new discord.MessageEmbed()
