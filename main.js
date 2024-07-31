@@ -129,9 +129,13 @@ app.get('/redirect', async ( req, res ) => {
 				}
 				else {
 					member.setNickname(username)
-					member.roles.add(786733881369690153)
 				}
-				
+
+				const role = guild.roles.cache.get('786733881369690153')
+				if (role) {
+					await member.roles.add(role)
+				}
+				  
 				const embed = new discord.MessageEmbed()
 				  .setColor('GREEN')
 				  .setDescription(`Successfully verified ${user.tag}!`)
