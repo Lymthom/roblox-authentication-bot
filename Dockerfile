@@ -4,6 +4,6 @@ COPY package.json package-lock.json ./
 
 RUN npm ci
 
-COPY . .
+COPY src/ .
 
-ENTRYPOINT node src/main.js
+ENTRYPOINT node main.js
