@@ -131,7 +131,7 @@ app.get('/redirect', async ( req, res ) => {
 					member.setNickname(username)
 				}
 
-				const role = guild.roles.cache.get('786733881369690153')
+				const role = guild.roles.resolve('786733881369690153')
 				if (role) {
 					await member.roles.add(role)
 				}
