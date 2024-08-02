@@ -6,4 +6,4 @@ RUN npm ci
 
 COPY . .
 
-ENTRYPOINT node main.js
+ENTRYPOINT node src/main.js
