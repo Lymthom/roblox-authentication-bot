@@ -131,9 +131,10 @@ app.get('/redirect', async ( req, res ) => {
 					member.setNickname(username)
 				}
 
-				const role = guild.roles.resolve('786733881369690153')
-				if (role) {
-					await member.roles.add(role)
+				try {
+					await member.roles.add("786733881369690153")
+				} catch (err) {
+					console.log(err)
 				}
 				  
 				const embed = new discord.MessageEmbed()
